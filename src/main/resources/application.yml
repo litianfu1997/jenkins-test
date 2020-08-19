@@ -1,0 +1,10 @@
+server:
+    port: 8011
+spring:
+    application:
+        name: demo
+#项目日志路径
+logging:
+    levels: info
+    file:
+        path: /usr/local/yuntu-service/yuntu-intelligent-log-system/log/
