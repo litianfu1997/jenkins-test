@@ -17,6 +17,7 @@ public class TestController {
 
     @RequestMapping("/test")
     public String test(){
+        System.out.println("hello world！ now is:"+ LocalDateTime.now());
         return "hello world！ now is:"+ LocalDateTime.now();
     }
 }
