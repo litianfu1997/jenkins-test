@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 
 /**
  * @author litianfu
@@ -20,6 +21,6 @@ public class TestController {
     @RequestMapping("/test")
     public String test(){
         log.info("hello world！ now is:"+ LocalDateTime.now());
-        return "hello world！ now is:"+ LocalDateTime.now();
+        return "hello world！ now is sss:"+ LocalDateTime.now(ZoneOffset.ofHours(8));
     }
 }

@@ -54,6 +54,35 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>0.9.11</version>
+                <configuration>
+                    <from>
+                        <!--base image-->
+                        <image>java:8</image>
+                    </from>
+                    <to>
+                        <!--<image>registry.cn-hangzhou.aliyuncs.com/m65536/jibtest</image>-->
+                        <!--目标镜像registry地址，为了方便测试，你需要换成自己的地址，如果你的网络不好，可以选用国内加速器，比如阿里云的-->
+                        <image>registry.cn-shenzhen.aliyuncs.com/tfboys0v0/myapp</image>
+                        <auth>
+                            <username>17877097595</username>
+                            <password>li1035869369</password>
+                        </auth>
+                    </to>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
